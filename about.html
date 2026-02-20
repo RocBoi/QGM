@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About QGM | Quez Global Music Publishing</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">QGM</div>
+  <nav>
+    <a href="index.html#home">Home</a>
+    <a href="#about">About</a>
+    <a href="licensing.html">Licensing</a>
+  </nav>
+</header>
+
+<section class="about-hero" id="about">
+  <div class="overlay"></div>
+  <div class="about-content">
+    <h1>ABOUT QGM</h1>
+    <p>QUEZ GLOBAL MUSIC PUBLISHING — STREET EXECUTIVE. INDEPENDENT. GLOBAL.</p>
+  </div>
+</section>
+
+<section class="about-section fade-in">
+  <h2>Our Mission & Vision</h2>
+  <p>
+    Quez Global Music Publishing (QGM) exists to empower artists with complete ownership and control of their music. 
+    Our vision is to set the standard for independent urban publishing, bridging the street and the boardroom. 
+    We focus on global royalty collection, sync opportunities, and professional rights administration.
+  </p>
+</section>
+
+<section class="about-section fade-in">
+  <h2>Our Slogan</h2>
+  <p>
+    "Own Your Sound. Control Your Empire."
+  </p>
+</section>
+
+<section class="about-section fade-in">
+  <h2>Submissions</h2>
+  <p>
+    All catalog, sync, and licensing inquiries can be submitted directly to: 
+    <a href="mailto:licensing@rocboiquez.online" class="btn gold">licensing@rocboiquez.online</a>
+  </p>
+  <p>
+    We respond to all inquiries within 24–48 hours. QGM is focused on building high-level partnerships while maintaining the street-level authenticity of RocBoi Quez’s catalog.
+  </p>
+</section>
+
+<footer>
+  <div>© 2026 Quez Global Music Publishing (QGM)</div>
+  <div>ASCAP Affiliated | All Rights Reserved</div>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.3 };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('appear');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>

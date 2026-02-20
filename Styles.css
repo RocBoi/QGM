@@ -1,101 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QGM | Quez Global Music Publishing</title>
-<meta name="description" content="Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez. Independent hip-hop publishing, sync licensing, and global royalty administration through ASCAP.">
-<meta name="keywords" content="RocBoi Quez Publishing, Atlanta Hip Hop Publisher, Independent Music Publishing, QGM Publishing, Hip Hop Sync Licensing">
-<meta name="robots" content="index, follow">
-
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "MusicOrganization",
- "name": "Quez Global Music Publishing",
- "url": "https://www.rocboiquez.online",
- "description": "Independent music publishing company representing RocBoi Quez.",
- "sameAs": ["https://www.ascap.com"]
+/* GLOBAL */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background: #000;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-</script>
-</head>
-<body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="stock-city-night.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    <div class="nav">
-        <a href="#hero">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#catalog">CATALOG</a>
-        <a href="#licensing">LICENSING</a>
-    </div>
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(40%) contrast(120%);
+}
 
-    <div class="hero-content" id="hero">
-        <img src="QGM-logo.png" alt="QGM Logo" class="logo">
-        <h1>QUEZ GLOBAL MUSIC PUBLISHING</h1>
-        <p>OWN YOUR SOUND. CONTROL YOUR EMPIRE.</p>
-        <a href="#licensing" class="button">ENTER EMPIRE</a>
-    </div>
-</section>
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), #000);
+    z-index: 2;
+}
 
-<!-- ABOUT SECTION -->
-<section class="section" id="about">
-    <h2>ABOUT QGM</h2>
-    <p>
-        Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez.
-        Built for independence, creative ownership, and global asset management, QGM administers
-        performance, mechanical, and synchronization rights worldwide through ASCAP.  
-        Our focus is solely on RocBoi Quez’s catalog, delivering professional publishing services
-        with major-level precision and street-level authenticity.
-    </p>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
 
-<!-- FEATURED CATALOG -->
-<section class="section" id="catalog">
-    <h2>FEATURED CATALOG</h2>
-    <div class="catalog-grid">
-        <div class="track">
-            <img src="placeholder-album1.jpeg" alt="Track 1">
-            <p>Get Out Your Feelings</p>
-        </div>
-        <div class="track">
-            <img src="placeholder-album2.jpeg" alt="Track 2">
-            <p>Chopped Not Slopped</p>
-        </div>
-        <div class="track">
-            <img src="placeholder-album3.jpeg" alt="Track 3">
-            <p>Next Release</p>
-        </div>
-    </div>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
+/* NAVIGATION */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+}
 
-<!-- SYNC & LICENSING -->
-<section class="section" id="licensing">
-    <h2>SYNC & LICENSING</h2>
-    <p>
-        Available for Film, Television, Commercials, Gaming, Digital Media, and Brand Campaigns.
-        All compositions are registered and protected through ASCAP.  
-        For professional inquiries:
-    </p>
-    <a href="licensing.html" class="button">LICENSING@ROCBOIQUEZ.ONLINE</a>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
 
-<!-- FOOTER -->
-<footer class="footer">
-    <a href="#hero" style="color:#555; text-decoration:underline;">Home</a> | © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP | ALL RIGHTS RESERVED
-</footer>
+.nav a:hover {
+    opacity: 0.7;
+}
 
-</body>
-</html>
+/* HERO CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-content .logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+    animation: popIn 1s ease forwards;
+}
+
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 70px;
+    margin: 0;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#FFD700,#FF4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 10px 0 30px;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 50px;
+    border: 2px solid #FFD700;
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    margin: 10px 5px;
+}
+
+.button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* SECTIONS */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #0a0a0a url('urban-texture.png') repeat;
+    background-size: cover;
+}
+
+.section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,#FFD700,#FF4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* CATALOG GRID */
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.track img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #FFD700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.track img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 20px #FFD700;
+}
+
+.track p {
+    margin-top: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 40px 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background: #000;
+    color: #555;
+    text-align: center;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 45px; }
+    .hero-content p { font-size: 16px; }
+    .catalog-grid { gap: 20px; }
+    .track img { width: 160px; height: 160px; }
+}

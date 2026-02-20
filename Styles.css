@@ -247,3 +247,25 @@ footer {
   font-size: 18px;
   color: #ccc;
 }
+/* Catalog Card */
+.catalog-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid #222;
+  background: #111;
+  transition: 0.3s ease;
+}
+
+.catalog-card:hover {
+  border-color: #C6A64A;
+  box-shadow: 0 0 25px rgba(198,166,74,0.3);
+}
+
+/* Coming Soon Text */
+.catalog-card.coming-soon p strong {
+  color: #FFD700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

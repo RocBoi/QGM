@@ -269,3 +269,75 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+/* LICENSING PAGE */
+
+.licensing-hero {
+  height: 60vh;
+  background: #0a0a0a url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=2070') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.licensing-hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.licensing-hero-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  color: #C6A64A;
+  letter-spacing: 3px;
+}
+
+.licensing-hero-content p {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.licensing-description, .licensing-cta {
+  padding: 80px 60px;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.licensing-description h2, .licensing-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.licensing-description p, .licensing-cta p, .licensing-description ul, .licensing-cta ul {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ccc;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.licensing-description ul, .licensing-cta ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.licensing-description ul li, .licensing-cta ul li {
+  margin-bottom: 10px;
+}
+
+.licensing-cta a.btn {
+  margin-top: 20px;
+  display: inline-block;
+}

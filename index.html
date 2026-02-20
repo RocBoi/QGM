@@ -6,10 +6,11 @@
 <title>QGM | Quez Global Music Publishing</title>
 <meta name="description" content="Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez. Independent hip-hop publishing, sync licensing, and global royalty administration through ASCAP.">
 <meta name="keywords" content="RocBoi Quez Publishing, Atlanta Hip Hop Publisher, Independent Music Publishing, QGM Publishing, Hip Hop Sync Licensing">
-<meta name="robots" content="index, follow">
-
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Particle JS library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script type="application/ld+json">
 {
@@ -25,12 +26,15 @@
 <body>
 
 <!-- HERO SECTION -->
-<section class="hero">
+<section class="hero" id="hero">
     <video autoplay muted loop playsinline class="hero-video">
         <source src="stock-city-night.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="hero-overlay"></div>
+
+    <!-- PARTICLE CANVAS -->
+    <div id="particles-js"></div>
 
     <div class="nav">
         <a href="#hero">HOME</a>
@@ -39,7 +43,7 @@
         <a href="#licensing">LICENSING</a>
     </div>
 
-    <div class="hero-content" id="hero">
+    <div class="hero-content">
         <img src="QGM-logo.png" alt="QGM Logo" class="logo">
         <h1>QUEZ GLOBAL MUSIC PUBLISHING</h1>
         <p>OWN YOUR SOUND. CONTROL YOUR EMPIRE.</p>
@@ -94,8 +98,29 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-    <a href="#hero" style="color:#555; text-decoration:underline;">Home</a> | © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP | ALL RIGHTS RESERVED
+    <a href="#hero" style="color:#555; text-decoration:underline;">Home</a> | © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP
 </footer>
+
+<!-- PARTICLES JS CONFIG -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {"value": 80},
+    "color": {"value": ["#FFD700","#FFFFFF","#FF4500"]},
+    "shape": {"type": "circle"},
+    "opacity": {"value": 0.5},
+    "size": {"value": 2},
+    "line_linked": {"enable": false},
+    "move": {"enable": true,"speed": 1}
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {"enable": true,"mode": "repulse"}
+    }
+  },
+  "retina_detect": true
+});
+</script>
 
 </body>
 </html>

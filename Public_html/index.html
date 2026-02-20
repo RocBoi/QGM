@@ -10,6 +10,7 @@
 <meta name="robots" content="index, follow">
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <script type="application/ld+json">
 {
@@ -25,194 +26,65 @@
 </script>
 
 <style>
-html { scroll-behavior: smooth; }
-
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.splash {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
-    letter-spacing: 12px;
-    z-index: 9999;
-    animation: fadeOut 2.5s forwards;
-    animation-delay: 2s;
-}
-
-@keyframes fadeOut {
-    to { opacity: 0; visibility: hidden; }
-}
-
+/* HERO BACKGROUND IMAGE VERSION */
 .hero {
     height: 100vh;
     position: relative;
     overflow: hidden;
-}
-
-.hero video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(30%) contrast(110%);
-}
-
-.hero-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), #000);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
-}
-
-.hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 110px;
-    letter-spacing: 12px;
-    margin: 0;
-}
-
-.hero h2 {
-    font-weight: 300;
-    letter-spacing: 5px;
-    margin-top: 10px;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 16px 60px;
-    border: 1px solid #fff;
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 3px;
-    transition: .3s;
-}
-
-.button:hover {
-    background: #fff;
-    color: #000;
-}
-
-.section {
-    padding: 120px 20px;
-    text-align: center;
-    background: #0a0a0a;
-}
-
-.section h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 55px;
-    letter-spacing: 6px;
-    margin-bottom: 30px;
-}
-
-.section p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    color: #aaa;
-}
-
-.footer {
-    padding: 50px 20px;
-    background: #000;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #555;
-}
-
-.nav {
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    text-align: center;
-    z-index: 3;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    letter-spacing: 3px;
-    font-size: 14px;
-}
-
-.nav a:hover {
-    opacity: .6;
+    background: linear-gradient(rgba(0,0,0,0.6), #000),
+                url('D7148033-7E25-4652-8794-6840B659DF76.jpeg') center/cover no-repeat;
 }
 </style>
 
 </head>
 <body>
 
+<!-- SPLASH ANIMATION -->
 <div class="splash">QGM</div>
 
+<!-- HERO SECTION -->
 <section class="hero">
 
-<video autoplay muted loop playsinline>
-<source src="background.mp4" type="video/mp4">
-</video>
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <a href="#about">ABOUT</a>
+        <a href="licensing.html">LICENSING</a>
+        <a href="catalog.html">CATALOG</a>
+    </div>
 
-<div class="hero-overlay"></div>
-
-<div class="nav">
-<a href="#about">ABOUT</a>
-<a href="licensing.html">LICENSING</a>
-<a href="catalog.html">CATALOG</a>
-</div>
-
-<div class="hero-content">
-<h1>QGM</h1>
-<h2>QUEZ GLOBAL MUSIC PUBLISHING</h2>
-<a href="licensing.html" class="button">ENTER EMPIRE</a>
-</div>
-
+    <div class="hero-content">
+        <h1>QGM</h1>
+        <h2>QUEZ GLOBAL MUSIC PUBLISHING</h2>
+        <a href="licensing.html" class="button">ENTER EMPIRE</a>
+    </div>
 </section>
 
+<!-- ABOUT SECTION -->
 <section class="section" id="about">
-<h3>INDEPENDENT. GLOBAL. STRUCTURED.</h3>
-<p>
-Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez.
-Built on ownership, creative control, and long-term asset protection, QGM administers
-performance, mechanical, and synchronization rights worldwide through ASCAP.
-Focused solely on catalog control and independent dominance, QGM operates
-with a major-level structure and street-rooted identity.
-</p>
+    <h3>INDEPENDENT. GLOBAL. STRUCTURED.</h3>
+    <p>
+        Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez.
+        Built on ownership, creative control, and long-term asset protection, QGM administers
+        performance, mechanical, and synchronization rights worldwide through ASCAP.
+        Focused solely on catalog control and independent dominance, QGM operates
+        with a major-level structure and street-rooted identity.
+    </p>
 </section>
 
+<!-- LICENSING CTA SECTION -->
 <section class="section">
-<h3>SYNC & LICENSING</h3>
-<p>
-Available for Film, Television, Commercials, Gaming, Digital Media, and Brand Campaigns.
-All compositions are registered and protected.
-For synchronization requests and publishing inquiries:
-</p>
-<a href="mailto:licensing@rocboiquez.online" class="button">LICENSING@ROCBOIQUEZ.ONLINE</a>
+    <h3>SYNC & LICENSING</h3>
+    <p>
+        Available for Film, Television, Commercials, Gaming, Digital Media, and Brand Campaigns.
+        All compositions are registered and protected.
+        For synchronization requests and publishing inquiries:
+    </p>
+    <a href="licensing.html" class="button">LICENSING@ROCBOIQUEZ.ONLINE</a>
 </section>
 
+<!-- FOOTER -->
 <div class="footer">
-© 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP | ALL RIGHTS RESERVED
+    © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP | ALL RIGHTS RESERVED
 </div>
 
 </body>

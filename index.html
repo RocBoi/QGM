@@ -4,59 +4,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QGM Publishing | Quez Global Music Publishing</title>
+
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
 
 <header>
   <div class="logo">QGM</div>
   <nav>
     <a href="#home">Home</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#licensing">Licensing</a>
     <a href="about.html">About</a>
-    <a href="licensing.html">Licensing</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
-  <div class="overlay"></div>
+
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="https://cdn.coverr.co/videos/coverr-city-traffic-at-night-1563/1080p.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <h1>QUEZ GLOBAL<br> MUSIC PUBLISHING</h1>
-    <p>ASCAP AFFILIATED | GLOBAL RIGHTS | ATLANTA</p>
-    <div class="buttons">
-      <a href="licensing.html" class="btn gold">Licensing</a>
+    <h1>QUEZ GLOBAL<br>MUSIC PUBLISHING</h1>
+    <p>ASCAP AFFILIATED • GLOBAL RIGHTS ADMINISTRATION • ATLANTA</p>
+    <div class="hero-buttons">
+      <a href="#licensing" class="btn gold">Sync & Licensing</a>
       <a href="about.html" class="btn outline">About QGM</a>
     </div>
   </div>
+
 </section>
 
-<section class="authority-strip">
-  <div>ASCAP PUBLISHER</div>
-  <div>GLOBAL ADMINISTRATION</div>
-  <div>SYNC READY CATALOG</div>
+<section class="authority">
+  <div>ASCAP REGISTERED PUBLISHER</div>
+  <div>100% CONTROLLED CATALOG</div>
+  <div>SYNC READY • FILM • TV • STREAMING</div>
   <div>ATLANTA, GA</div>
 </section>
 
-<section class="catalog">
+<section class="catalog fade-in" id="catalog">
   <h2>Featured Writer</h2>
-  <div class="artist">
+  <div class="catalog-card">
     <h3>RocBoi Quez</h3>
-    <p>Hip-Hop | Southern Trap | Chopped Not Slopped</p>
-    <p>Worldwide Publishing Control</p>
+    <p>Southern Hip-Hop • Trap • Chopped Not Slopped</p>
+    <p>Publishing Administration via QGM</p>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Global Sync & Licensing Requests</h2>
-  <p>Film • TV • Streaming • Commercial • Gaming</p>
-  <a href="licensing.html" class="btn gold">Submit Inquiry</a>
+<section class="licensing fade-in" id="licensing">
+  <h2>Global Licensing</h2>
+  <p>Film • Television • Commercial • Gaming • Digital Platforms</p>
+  <a href="licensing.html" class="btn gold">Submit Licensing Inquiry</a>
 </section>
 
 <footer>
   <div>© 2026 Quez Global Music Publishing (QGM)</div>
   <div>ASCAP Affiliated | All Rights Reserved</div>
 </footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('appear');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 
 </body>
 </html>

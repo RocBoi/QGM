@@ -7,7 +7,6 @@
 
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -21,14 +20,12 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="home">
-
   <video autoplay muted loop playsinline class="hero-video">
     <source src="https://cdn.coverr.co/videos/coverr-city-traffic-at-night-1563/1080p.mp4" type="video/mp4">
   </video>
-
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <h1>QUEZ GLOBAL<br>MUSIC PUBLISHING</h1>
     <p>ASCAP AFFILIATED • GLOBAL RIGHTS ADMINISTRATION • ATLANTA</p>
@@ -37,9 +34,9 @@
       <a href="about.html" class="btn outline">About QGM</a>
     </div>
   </div>
-
 </section>
 
+<!-- AUTHORITY STRIP -->
 <section class="authority">
   <div>ASCAP REGISTERED PUBLISHER</div>
   <div>100% CONTROLLED CATALOG</div>
@@ -47,15 +44,17 @@
   <div>ATLANTA, GA</div>
 </section>
 
+<!-- CATALOG SECTION -->
 <section class="catalog fade-in" id="catalog">
   <h2>Featured Writer</h2>
-  <div class="catalog-card">
+  <div class="catalog-card coming-soon">
     <h3>RocBoi Quez</h3>
     <p>Southern Hip-Hop • Trap • Chopped Not Slopped</p>
-    <p>Publishing Administration via QGM</p>
+    <p><strong>Catalog Coming Soon</strong></p>
   </div>
 </section>
 
+<!-- LICENSING SECTION -->
 <section class="licensing fade-in" id="licensing">
   <h2>Global Licensing</h2>
   <p>Film • Television • Commercial • Gaming • Digital Platforms</p>
@@ -69,11 +68,7 @@
 
 <script>
 const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-  threshold: 0.3
-};
-
+const appearOptions = { threshold: 0.3 };
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -81,10 +76,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
     appearOnScroll.unobserve(entry.target);
   });
 }, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
 
 </body>

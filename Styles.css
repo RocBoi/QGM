@@ -5,18 +5,21 @@
 }
 
 body {
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: white;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
+
 header {
   position: fixed;
   width: 100%;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
+  align-items: center;
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px);
   z-index: 1000;
@@ -24,15 +27,18 @@ header {
 
 .logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 32px;
-  letter-spacing: 2px;
+  font-size: 34px;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #FFD700, #C6A64A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   margin-left: 30px;
-  font-weight: 300;
+  font-weight: 400;
   transition: 0.3s ease;
 }
 
@@ -41,48 +47,55 @@ nav a:hover {
 }
 
 /* HERO */
+
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2070') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.overlay {
+.hero-video {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.95));
 }
 
 .hero-content {
   position: relative;
-  text-align: center;
   max-width: 900px;
 }
 
 .hero h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 72px;
-  letter-spacing: 3px;
+  font-size: 80px;
+  letter-spacing: 4px;
 }
 
 .hero p {
   margin: 20px 0;
-  font-weight: 300;
   color: #ccc;
 }
 
-.buttons {
+.hero-buttons {
   margin-top: 30px;
 }
 
 .btn {
-  padding: 14px 34px;
+  padding: 14px 40px;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 10px;
   font-weight: 600;
   transition: 0.3s ease;
 }
@@ -93,7 +106,7 @@ nav a:hover {
 }
 
 .gold:hover {
-  background: white;
+  background: #FFD700;
 }
 
 .outline {
@@ -107,49 +120,79 @@ nav a:hover {
 }
 
 /* AUTHORITY STRIP */
-.authority-strip {
+
+.authority {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  padding: 40px 20px;
   background: #111;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 /* CATALOG */
+
 .catalog {
-  padding: 100px 60px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .catalog h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 40px;
 }
 
-.artist h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-/* CTA */
-.cta {
+.catalog-card {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #222;
   background: #111;
-  padding: 100px 20px;
-  text-align: center;
+  transition: 0.3s ease;
 }
 
-.cta h2 {
+.catalog-card:hover {
+  border-color: #C6A64A;
+  box-shadow: 0 0 25px rgba(198,166,74,0.3);
+}
+
+/* LICENSING */
+
+.licensing {
+  padding: 120px 20px;
+  text-align: center;
+  background: #0f0f0f;
+}
+
+.licensing h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 36px;
+  font-size: 45px;
   margin-bottom: 20px;
 }
 
+/* FOOTER */
+
 footer {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
-  background: black;
   font-size: 13px;
   color: #777;
+  background: black;
+}
+
+/* FADE IN ANIMATION */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,126 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QGM | Quez Global Music Publishing</title>
-<meta name="description" content="Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez. Independent hip-hop publishing, sync licensing, and global royalty administration through ASCAP.">
-<meta name="keywords" content="RocBoi Quez Publishing, Atlanta Hip Hop Publisher, Independent Music Publishing, QGM Publishing, Hip Hop Sync Licensing">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<!-- Particle JS library -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "MusicOrganization",
- "name": "Quez Global Music Publishing",
- "url": "https://www.rocboiquez.online",
- "description": "Independent music publishing company representing RocBoi Quez.",
- "sameAs": ["https://www.ascap.com"]
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QGM Publishing</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero" id="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="stock-city-night.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay"></div>
+  <!-- Header / Hero with Logo -->
+  <header class="hero">
+    <img src="assets/images/qgm-logo.png" alt="QGM Publishing Logo" class="logo">
+    <h1>QGM PUBLISHING</h1>
+  </header>
 
-    <!-- PARTICLE CANVAS -->
-    <div id="particles-js"></div>
-
-    <div class="nav">
-        <a href="#hero">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#catalog">CATALOG</a>
-        <a href="#licensing">LICENSING</a>
-    </div>
-
-    <div class="hero-content">
-        <img src="QGM-logo.png" alt="QGM Logo" class="logo">
-        <h1>QUEZ GLOBAL MUSIC PUBLISHING</h1>
-        <p>OWN YOUR SOUND. CONTROL YOUR EMPIRE.</p>
-        <a href="#licensing" class="button">ENTER EMPIRE</a>
-    </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section class="section" id="about">
-    <h2>ABOUT QGM</h2>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About QGM Publishing</h2>
     <p>
-        Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez.
-        Built for independence, creative ownership, and global asset management, QGM administers
-        performance, mechanical, and synchronization rights worldwide through ASCAP.  
-        Our focus is solely on RocBoi Quez’s catalog, delivering professional publishing services
-        with major-level precision and street-level authenticity.
+      QGM Publishing is a forward-thinking music publishing company committed to empowering artists, songwriters, and producers. We specialize in discovering, developing, and monetizing original music while protecting the rights of creators. With dedication to creative freedom and industry-leading partnerships, QGM Publishing ensures that every composition reaches its full potential and earns the recognition it deserves.
     </p>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
+  </section>
 
-<!-- FEATURED CATALOG -->
-<section class="section" id="catalog">
-    <h2>FEATURED CATALOG</h2>
-    <div class="catalog-grid">
-        <div class="track">
-            <img src="placeholder-album1.jpeg" alt="Track 1">
-            <p>Get Out Your Feelings</p>
-        </div>
-        <div class="track">
-            <img src="placeholder-album2.jpeg" alt="Track 2">
-            <p>Chopped Not Slopped</p>
-        </div>
-        <div class="track">
-            <img src="placeholder-album3.jpeg" alt="Track 3">
-            <p>Next Release</p>
-        </div>
-    </div>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
-
-<!-- SYNC & LICENSING -->
-<section class="section" id="licensing">
-    <h2>SYNC & LICENSING</h2>
+  <!-- Join Section -->
+  <section id="join">
+    <h2>Be Part of QGM Publishing</h2>
     <p>
-        Available for Film, Television, Commercials, Gaming, Digital Media, and Brand Campaigns.
-        All compositions are registered and protected through ASCAP.  
-        For professional inquiries:
+      We are accepting submissions from artists, producers, and songwriters. Join QGM Publishing to have your music professionally represented, royalties tracked, and creative freedom maintained.
     </p>
-    <a href="licensing.html" class="button">LICENSING@ROCBOIQUEZ.ONLINE</a>
-    <a href="#hero" class="button">BACK TO HOME</a>
-</section>
+    <a href="mailto:contact@qgmpublishing.com" class="cta-button">Submit Your Work</a>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <a href="#hero" style="color:#555; text-decoration:underline;">Home</a> | © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP
-</footer>
+  <!-- Catalog Section -->
+  <section id="catalog">
+    <h2>Catalog Coming Soon</h2>
+    <p>
+      QGM Publishing is building a curated catalog of music spanning multiple genres. Stay tuned for upcoming releases, exclusive tracks, and original compositions. Backed by ASCAP, your music rights are secure and your royalties protected.
+    </p>
+    <img src="assets/images/ascap-logo.png" alt="ASCAP Logo" class="ascap-logo">
+  </section>
 
-<!-- PARTICLES JS CONFIG -->
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {"value": 80},
-    "color": {"value": ["#FFD700","#FFFFFF","#FF4500"]},
-    "shape": {"type": "circle"},
-    "opacity": {"value": 0.5},
-    "size": {"value": 2},
-    "line_linked": {"enable": false},
-    "move": {"enable": true,"speed": 1}
-  },
-  "interactivity": {
-    "events": {
-      "onhover": {"enable": true,"mode": "repulse"}
-    }
-  },
-  "retina_detect": true
-});
-</script>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 QGM Publishing | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>

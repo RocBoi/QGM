@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Licensing | QGM Publishing</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">QGM</div>
+  <nav>
+    <a href="index.html#home">Home</a>
+    <a href="index.html#catalog">Catalog</a>
+    <a href="#licensing">Licensing</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="licensing-hero" id="licensing">
+  <div class="overlay"></div>
+  <div class="licensing-hero-content">
+    <h1>GLOBAL LICENSING & SYNC</h1>
+    <p>Quez Global Music Publishing (QGM) provides full publishing rights, sync clearance, and licensing for all media projects worldwide.</p>
+  </div>
+</section>
+
+<section class="licensing-description fade-in">
+  <h2>Our Licensing Services</h2>
+  <p>
+    QGM Publishing specializes in professional licensing for independent and commercial projects. We handle:
+  </p>
+  <ul>
+    <li>Film and Television placements</li>
+    <li>Streaming platforms and web content</li>
+    <li>Video game soundtracks</li>
+    <li>Commercial and advertising campaigns</li>
+    <li>Podcasts and digital media productions</li>
+  </ul>
+
+  <p>
+    All submissions are reviewed by our Rights Administration team to ensure accurate royalty collection, legal compliance, and timely clearance. We provide exclusive and non-exclusive licensing agreements depending on the project scope.
+  </p>
+</section>
+
+<section class="licensing-cta fade-in">
+  <h2>How to Submit Your Request</h2>
+  <p>
+    Please submit all licensing inquiries to our dedicated email: 
+    <a href="mailto:licensing@rocboiquez.online" class="btn gold">licensing@rocboiquez.online</a>
+  </p>
+
+  <p>Include the following details for faster processing:</p>
+  <ul>
+    <li>Project name and description</li>
+    <li>Media type (film, TV, commercial, game, digital)</li>
+    <li>Expected usage duration</li>
+    <li>Territory / market</li>
+    <li>Budget or licensing range</li>
+  </ul>
+
+  <p>
+    QGM responds within 24–48 hours to ensure your project stays on schedule. Our goal is to make licensing simple, transparent, and efficient while maintaining full control of RocBoi Quez’s catalog and rights.
+  </p>
+
+  <a href="mailto:licensing@rocboiquez.online" class="btn gold">Submit Licensing Request</a>
+</section>
+
+<footer>
+  <div>© 2026 Quez Global Music Publishing (QGM)</div>
+  <div>ASCAP Affiliated | All Rights Reserved</div>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.3 };
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('appear');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>

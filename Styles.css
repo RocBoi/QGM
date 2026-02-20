@@ -1,146 +1,101 @@
-/* GLOBAL SETTINGS */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    background: #000;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QGM | Quez Global Music Publishing</title>
+<meta name="description" content="Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez. Independent hip-hop publishing, sync licensing, and global royalty administration through ASCAP.">
+<meta name="keywords" content="RocBoi Quez Publishing, Atlanta Hip Hop Publisher, Independent Music Publishing, QGM Publishing, Hip Hop Sync Licensing">
+<meta name="robots" content="index, follow">
 
-/* HERO */
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-.hero-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(40%) contrast(120%);
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MusicOrganization",
+ "name": "Quez Global Music Publishing",
+ "url": "https://www.rocboiquez.online",
+ "description": "Independent music publishing company representing RocBoi Quez.",
+ "sameAs": ["https://www.ascap.com"]
 }
+</script>
+</head>
+<body>
 
-.hero-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), #000);
-    z-index: 2;
-}
+<!-- HERO SECTION -->
+<section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="stock-city-night.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
 
-.nav {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    padding: 30px;
-}
+    <div class="nav">
+        <a href="#hero">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#catalog">CATALOG</a>
+        <a href="#licensing">LICENSING</a>
+    </div>
 
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
+    <div class="hero-content" id="hero">
+        <img src="QGM-logo.png" alt="QGM Logo" class="logo">
+        <h1>QUEZ GLOBAL MUSIC PUBLISHING</h1>
+        <p>OWN YOUR SOUND. CONTROL YOUR EMPIRE.</p>
+        <a href="#licensing" class="button">ENTER EMPIRE</a>
+    </div>
+</section>
 
-.nav a:hover {
-    opacity: 0.7;
-}
+<!-- ABOUT SECTION -->
+<section class="section" id="about">
+    <h2>ABOUT QGM</h2>
+    <p>
+        Quez Global Music Publishing (QGM) is the official publishing company of RocBoi Quez.
+        Built for independence, creative ownership, and global asset management, QGM administers
+        performance, mechanical, and synchronization rights worldwide through ASCAP.  
+        Our focus is solely on RocBoi Quez’s catalog, delivering professional publishing services
+        with major-level precision and street-level authenticity.
+    </p>
+    <a href="#hero" class="button">BACK TO HOME</a>
+</section>
 
-.hero-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
-}
+<!-- FEATURED CATALOG -->
+<section class="section" id="catalog">
+    <h2>FEATURED CATALOG</h2>
+    <div class="catalog-grid">
+        <div class="track">
+            <img src="placeholder-album1.jpeg" alt="Track 1">
+            <p>Get Out Your Feelings</p>
+        </div>
+        <div class="track">
+            <img src="placeholder-album2.jpeg" alt="Track 2">
+            <p>Chopped Not Slopped</p>
+        </div>
+        <div class="track">
+            <img src="placeholder-album3.jpeg" alt="Track 3">
+            <p>Next Release</p>
+        </div>
+    </div>
+    <a href="#hero" class="button">BACK TO HOME</a>
+</section>
 
-.hero-content .logo {
-    max-width: 250px;
-    margin-bottom: 20px;
-}
+<!-- SYNC & LICENSING -->
+<section class="section" id="licensing">
+    <h2>SYNC & LICENSING</h2>
+    <p>
+        Available for Film, Television, Commercials, Gaming, Digital Media, and Brand Campaigns.
+        All compositions are registered and protected through ASCAP.  
+        For professional inquiries:
+    </p>
+    <a href="licensing.html" class="button">LICENSING@ROCBOIQUEZ.ONLINE</a>
+    <a href="#hero" class="button">BACK TO HOME</a>
+</section>
 
-.hero-content h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 70px;
-    margin: 0;
-    letter-spacing: 6px;
-}
+<!-- FOOTER -->
+<footer class="footer">
+    <a href="#hero" style="color:#555; text-decoration:underline;">Home</a> | © 2026 QUEZ GLOBAL MUSIC PUBLISHING | ADMINISTERED BY ASCAP | ALL RIGHTS RESERVED
+</footer>
 
-.hero-content p {
-    font-size: 18px;
-    margin: 10px 0 30px;
-    color: #ccc;
-}
-
-.button {
-    display: inline-block;
-    padding: 16px 50px;
-    border: 1px solid #fff;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* SECTION */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-    background: #0a0a0a;
-}
-
-.section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.section p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    color: #aaa;
-}
-
-/* FEATURED CATALOG GRID */
-.catalog-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.track img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border: 2px solid #fff;
-}
-
-.track p {
-    margin-top: 12px;
-    font-weight: 600;
-}
-
-/* FOOTER */
-.footer {
-    padding: 40px 20px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    background: #000;
-    color: #555;
-    text-align: center;
-}
+</body>
+</html>

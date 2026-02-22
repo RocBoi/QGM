@@ -1,7 +1,6 @@
 /* ============================= */
 /* GLOBAL RESET */
 /* ============================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -18,13 +17,11 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   letter-spacing: 0.3px;
-  overflow-x: hidden;
 }
 
 /* ============================= */
 /* HEADER */
 /* ============================= */
-
 header {
   position: fixed;
   width: 100%;
@@ -36,13 +33,7 @@ header {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255,255,255,0.05);
   z-index: 1000;
-  transition: padding 0.3s ease, background 0.3s ease;
-}
-
-/* Shrink state (triggered by JS) */
-header.scrolled {
-  padding: 14px 70px;
-  background: rgba(10,10,10,0.9);
+  transition: 0.3s ease;
 }
 
 .logo-link {
@@ -50,30 +41,24 @@ header.scrolled {
   align-items: center;
 }
 
+/* ============================= */
+/* LOGO FIX */
+/* ============================= */
 .site-logo {
-  height: 65px;
-  width: auto;
+  max-width: 180px;  /* desktop max */
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition: max-width 0.3s ease, transform 0.3s ease;
 }
 
+/* Shrink logo on scroll */
 header.scrolled .site-logo {
-  height: 50px;
-}
-
-.site-logo:hover {
-  transform: scale(1.05);
+  max-width: 140px;
 }
 
 /* ============================= */
 /* NAVIGATION */
-/* ============================= */
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
 nav a {
   color: #ffffff;
   text-decoration: none;
@@ -107,8 +92,6 @@ nav a:hover {
 
 /* ============================= */
 /* HERO */
-/* ============================= */
-
 .hero {
   height: 100vh;
   position: relative;
@@ -155,8 +138,6 @@ nav a:hover {
 
 /* ============================= */
 /* BUTTONS */
-/* ============================= */
-
 .btn {
   padding: 16px 45px;
   text-decoration: none;
@@ -167,7 +148,6 @@ nav a:hover {
   text-transform: uppercase;
   transition: 0.3s ease;
   display: inline-block;
-  border-radius: 3px;
 }
 
 .gold {
@@ -194,8 +174,6 @@ nav a:hover {
 
 /* ============================= */
 /* AUTHORITY STRIP */
-/* ============================= */
-
 .authority {
   display: flex;
   justify-content: space-evenly;
@@ -208,13 +186,10 @@ nav a:hover {
   border-top: 1px solid #1f1f1f;
   border-bottom: 1px solid #1f1f1f;
   color: #888;
-  text-align: center;
 }
 
 /* ============================= */
 /* SECTIONS */
-/* ============================= */
-
 section {
   padding: 130px 80px;
   text-align: center;
@@ -239,8 +214,6 @@ p {
 
 /* ============================= */
 /* CARDS */
-/* ============================= */
-
 .catalog-card {
   max-width: 650px;
   margin: 50px auto;
@@ -261,10 +234,14 @@ p {
   margin-bottom: 15px;
 }
 
-/* ============================= */
-/* ABOUT & LICENSING HERO */
-/* ============================= */
+.catalog-card.coming-soon p strong {
+  color: #FFD700;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
 
+/* ============================= */
+/* ABOUT / LICENSING HERO */
 .about-hero,
 .licensing-hero {
   height: 60vh;
@@ -301,9 +278,20 @@ p {
 }
 
 /* ============================= */
-/* FOOTER */
-/* ============================= */
+/* LISTS */
+ul, ol {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: left;
+  color: #cfcfcf;
+}
 
+li {
+  margin-bottom: 12px;
+}
+
+/* ============================= */
+/* FOOTER */
 footer {
   padding: 60px;
   text-align: center;
@@ -315,12 +303,10 @@ footer {
 
 /* ============================= */
 /* FADE IN */
-/* ============================= */
-
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.9s ease;
+  transform: translateY(50px);
+  transition: 1s ease;
 }
 
 .fade-in.appear {
@@ -330,123 +316,48 @@ footer {
 
 /* ============================= */
 /* RESPONSIVE */
-/* ============================= */
-
-@media (min-width: 1400px) {
-  .site-logo {
-    height: 75px;
-  }
-  header.scrolled .site-logo {
-    height: 60px;
-  }
-}
-
 @media (max-width: 1024px) {
   section {
     padding: 100px 40px;
   }
-
   .hero h1 {
     font-size: 60px;
   }
-
   nav a {
     margin-left: 20px;
-  }
-
-  .site-logo {
-    height: 55px;
-  }
-
-  header.scrolled .site-logo {
-    height: 45px;
   }
 }
 
 @media (max-width: 768px) {
   header {
-    padding: 18px 30px;
+    padding: 20px 30px;
   }
-
-  header.scrolled {
-    padding: 12px 30px;
-  }
-
-  section {
-    padding: 80px 25px;
-  }
-
   .hero h1 {
     font-size: 48px;
   }
-
   h2 {
     font-size: 36px;
   }
-
+  section {
+    padding: 80px 25px;
+  }
   .authority {
     flex-direction: column;
     gap: 15px;
   }
-
-  .site-logo {
-    height: 45px;
-  }
-
-  header.scrolled .site-logo {
-    height: 38px;
-  }
 }
 
 @media (max-width: 480px) {
   .site-logo {
-    height: 38px;
-  }
-
-  header.scrolled .site-logo {
-    height: 32px;
-  }
-}
-/* ============================= */
-/* LOGO SCALING & HEADER SHRINK */
-/* ============================= */
-
-.site-logo {
-  height: 55px; /* default for desktop */
-  width: auto;
-  object-fit: contain;
-  transition: height 0.3s ease, transform 0.3s ease;
-}
-
-/* Shrink on scroll */
-header.scrolled .site-logo {
-  height: 40px; /* smaller on scroll */
-}
-
-/* Responsive Logo */
-@media (max-width: 1024px) {
-  .site-logo {
-    height: 45px; /* tablet */
+    max-width: 100px;
   }
   header.scrolled .site-logo {
-    height: 35px;
+    max-width: 80px;
   }
-}
-
-@media (max-width: 768px) {
-  .site-logo {
-    height: 38px; /* mobile */
+  .hero h1 {
+    font-size: 36px;
   }
-  header.scrolled .site-logo {
-    height: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-logo {
-    height: 32px; /* small phones */
-  }
-  header.scrolled .site-logo {
-    height: 28px;
+  h2 {
+    font-size: 28px;
   }
 }

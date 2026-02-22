@@ -407,3 +407,46 @@ footer {
     height: 32px;
   }
 }
+/* ============================= */
+/* LOGO SCALING & HEADER SHRINK */
+/* ============================= */
+
+.site-logo {
+  height: 55px; /* default for desktop */
+  width: auto;
+  object-fit: contain;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+/* Shrink on scroll */
+header.scrolled .site-logo {
+  height: 40px; /* smaller on scroll */
+}
+
+/* Responsive Logo */
+@media (max-width: 1024px) {
+  .site-logo {
+    height: 45px; /* tablet */
+  }
+  header.scrolled .site-logo {
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    height: 38px; /* mobile */
+  }
+  header.scrolled .site-logo {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    height: 32px; /* small phones */
+  }
+  header.scrolled .site-logo {
+    height: 28px;
+  }
+}

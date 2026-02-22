@@ -21,23 +21,21 @@ faders.forEach(fader => {
 });
 
 // ===============================
-// HEADER SHRINK ON SCROLL
+// HEADER SHRINK EFFECT
 // ===============================
 
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 80) {
-    header.style.padding = "15px 70px";
-    header.style.background = "rgba(10,10,10,0.85)";
+    header.classList.add('scrolled');
   } else {
-    header.style.padding = "22px 70px";
-    header.style.background = "rgba(10,10,10,0.65)";
+    header.classList.remove('scrolled');
   }
 });
 
 // ===============================
-// SMOOTH SCROLL FOR NAV LINKS
+// SMOOTH SCROLL NAVIGATION
 // ===============================
 
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {

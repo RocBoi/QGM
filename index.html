@@ -5,79 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Quez Global Music Publishing | RocBoi Quez</title>
-<meta name="description" content="Luxury global music publishing. Accepting artists, producers, songwriters & YouTube content creators. Publishing Elevated.">
+<meta name="description" content="Luxury global music publishing. Accepting ASCAP songwriters, producers & content creators. Publishing Elevated.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Quez Global Music Publishing | RocBoi Quez">
-<meta property="og:description" content="Luxury global music publishing. ASCAP affiliated. Strategic sync & rights administration.">
-<meta property="og:image" content="https://raw.githubusercontent.com/RocBoi/QGM/0fbf02033d331f2f96b2cce51b8b6627e570283d/885E390E-CADF-465B-AD2F-9F9D3245FF05.png">
-<meta property="og:url" content="https://www.rocboiquez.online">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quez Global Music Publishing">
-<meta name="twitter:description" content="Your Sound. Our Vision. Global Reach.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/RocBoi/QGM/0fbf02033d331f2f96b2cce51b8b6627e570283d/885E390E-CADF-465B-AD2F-9F9D3245FF05.png">
-
-<link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Global Styles */
+  body {
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background-color:#000;
+    color:#f0c040;
+  }
+  a { color:#f0c040; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background-color:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+  }
+  .logo { font-family:'Bebas Neue', sans-serif; font-size:2rem; letter-spacing:2px; }
+  nav a { margin-left:30px; font-weight:500; }
+  
+  /* Hero Section */
+  .hero { position:relative; text-align:center; height:80vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .hero video { position:absolute; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .hero-overlay { position:absolute; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:1; }
+  .hero-content { position:relative; z-index:2; max-width:900px; }
+  .hero-content h1 { font-family:'Bebas Neue'; font-size:3rem; margin-bottom:20px; color:#f0c040; }
+  .hero-content p { font-size:1.2rem; margin-bottom:30px; color:#fff; }
+  .btn { padding:12px 30px; border-radius:6px; font-weight:600; transition:0.3s; }
+  .btn.gold { background-color:#f0c040; color:#000; margin-right:15px; }
+  .btn.gold:hover { background-color:#d4aa00; }
+  .btn.outline { border:2px solid #f0c040; color:#f0c040; }
+  .btn.outline:hover { background-color:#f0c040; color:#000; }
+
+  section { padding:60px 20px; max-width:1200px; margin:0 auto; }
+  h2 { font-family:'Bebas Neue'; font-size:2.2rem; margin-bottom:20px; color:#f0c040; }
+  p, li { font-size:1rem; line-height:1.8; color:#fff; }
+  ul { padding-left:20px; }
+
+  .authority { display:flex; flex-wrap:wrap; justify-content:space-around; background-color:#111; padding:40px 20px; margin:0; color:#f0c040; text-align:center; font-weight:600; }
+
+  /* NFT / Digital Assets Section */
+  #digital-assets { background-color:#111; text-align:center; }
+  #digital-assets ul { list-style:none; padding:0; margin-bottom:40px; color:#fff; }
+  #digital-assets li { margin:10px 0; }
+
+  /* Footer */
+  footer { text-align:center; padding:40px 20px; background-color:#111; color:#f0c040; }
+</style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-  <a href="#home" class="logo-link">
-    <div class="logo">QGM</div>
-  </a>
+  <div class="logo">QGM</div>
   <nav>
     <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#catalog">Catalog</a>
     <a href="#sync">Sync</a>
     <a href="#administration">Administration</a>
     <a href="#submissions">Submissions</a>
-    <a href="about.html">About</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <video autoplay muted loop playsinline class="hero-video">
+  <video autoplay muted loop playsinline>
     <source src="https://cdn.coverr.co/videos/coverr-city-traffic-at-night-1563/1080p.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>QUEZ GLOBAL<br>MUSIC PUBLISHING</h1>
     <p>ASCAP AFFILIATED PUBLISHER • GLOBAL RIGHTS ADMINISTRATION • SYNC FORWARD</p>
-    <div class="hero-buttons">
+    <div>
       <a href="#sync" class="btn gold">Sync & Licensing</a>
       <a href="#submissions" class="btn outline">Submit Music</a>
     </div>
   </div>
 </section>
 
-<!-- AUTHORITY STRIP -->
-<section class="authority">
-  <div>ASCAP REGISTERED PUBLISHER</div>
-  <div>100% CONTROLLED & CLEARED CATALOG</div>
-  <div>ONE-STOP SYNC READY</div>
-  <div>ATLANTA, GEORGIA • GLOBAL REACH</div>
-</section>
-
-<!-- COMPANY POSITIONING -->
-<section class="positioning fade-in">
-  <h2>Strategic Music Publishing</h2>
+<!-- ABOUT / MISSION STATEMENT -->
+<section id="about">
+  <h2>About & Mission</h2>
   <p>
-    QGM Publishing provides full-service music publishing solutions including global rights management,
-    royalty collection, copyright administration, and sync licensing representation.
-    Our catalog is structured for film, television, gaming, commercial, and digital platform placement.
+    At Quez Global Music Publishing (QGM), we are committed to elevating music creators worldwide.  
+    Our mission is to empower <strong>ASCAP songwriters, content creators, and producers</strong> by providing transparent rights administration, strategic sync placement, and full catalog ownership.
   </p>
+  <p>
+    <strong>Slogan:</strong> Your Sound. Our Vision. Global Reach.
+  </p>
+  <p>Contact: <a href="mailto:licensing@rocboiquez.online">licensing@rocboiquez.online</a></p>
 </section>
 
 <!-- CATALOG -->
-<section class="catalog fade-in" id="catalog">
+<section class="catalog" id="catalog">
   <h2>Featured Writer / Producer</h2>
-  <div class="catalog-card">
+  <div>
     <h3>RocBoi Quez</h3>
     <p>Southern Hip-Hop • Trap • Chopped Not Slopped</p>
     <p>ASCAP Registered Writer</p>
@@ -86,7 +117,7 @@
 </section>
 
 <!-- SYNC SECTION -->
-<section class="sync fade-in" id="sync">
+<section class="sync" id="sync">
   <h2>Sync & Creative Licensing</h2>
   <p>
     We actively pitch select compositions to music supervisors, film studios,
@@ -102,7 +133,7 @@
 </section>
 
 <!-- ADMINISTRATION -->
-<section class="administration fade-in" id="administration">
+<section class="administration" id="administration">
   <h2>Rights Administration</h2>
   <p>
     QGM Publishing handles performance royalties, mechanical royalties,
@@ -114,40 +145,29 @@
 </section>
 
 <!-- NFT / DIGITAL ASSETS SECTION -->
-<section id="digital-assets" style="padding: 60px 20px; background-color:#111; color:#fff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-  <div style="max-width:900px; margin:0 auto; text-align:center;">
-    <h2 style="font-size:2.5rem; font-weight:700; margin-bottom:20px;">Digital Assets & Ownership</h2>
-    <p style="font-size:1.1rem; line-height:1.8; margin-bottom:40px; color:#ccc;">
-      <strong>All In – Official Music Video</strong><br>
-      Limited On-Chain Edition (50)
-    </p>
-    <p style="font-size:1rem; line-height:1.8; margin-bottom:30px; color:#aaa;">
-      RocBoi Quez independently deployed a creator-owned smart contract via <a href="https://manifold.xyz" target="_blank" style="color:#f0c040; text-decoration:none;">Manifold</a>, establishing blockchain-verified provenance for his visual catalog. 
-      This release marks the entry of the RocBoi Quez archive into digital asset ownership infrastructure.
-    </p>
-    <ul style="list-style:none; padding:0; margin-bottom:40px; color:#ccc; font-size:0.95rem; line-height:1.6;">
-      <li>✔ Creator-owned contract</li>
-      <li>✔ Limited edition supply</li>
-      <li>✔ Permanent provenance</li>
-      <li>✔ Independent distribution control</li>
-    </ul>
-    <a href="https://manifold.xyz/@rocboiquez/contract/145393904/1?utm_source=manifold_gallery&utm_medium=clipboard&utm_campaign=share_link" target="_blank" 
-       style="display:inline-block; padding:14px 30px; font-size:1rem; font-weight:600; color:#111; background-color:#f0c040; border-radius:6px; text-decoration:none; transition:0.3s;">
-      View Verified Release
-    </a>
-  </div>
+<section id="digital-assets">
+  <h2>Digital Assets & Ownership</h2>
+  <p><strong>All In – Official Music Video</strong><br>Limited On-Chain Edition (50)</p>
+  <p>
+    RocBoi Quez independently deployed a creator-owned smart contract via <a href="https://manifold.xyz" target="_blank">Manifold</a>, establishing blockchain-verified provenance for his visual catalog.
+  </p>
+  <ul>
+    <li>✔ Creator-owned contract</li>
+    <li>✔ Limited edition supply</li>
+    <li>✔ Permanent provenance</li>
+    <li>✔ Independent distribution control</li>
+  </ul>
+  <a href="https://manifold.xyz/@rocboiquez/contract/145393904/1?utm_source=manifold_gallery&utm_medium=clipboard&utm_campaign=share_link" target="_blank" class="btn gold">View Verified Release</a>
 </section>
 
 <!-- SUBMISSIONS -->
-<section class="submissions fade-in" id="submissions">
+<section class="submissions" id="submissions">
   <h2>Writer & Producer Submissions</h2>
   <p>
     We are selectively reviewing high-quality, sync-ready compositions.
     Submit instrumentals, songs, and production reels for consideration.
   </p>
-  <a href="mailto:licensing@rocboiquez.online" class="btn outline">
-    licensing@rocboiquez.online
-  </a>
+  <p>Contact: <a href="mailto:licensing@rocboiquez.online">licensing@rocboiquez.online</a></p>
 </section>
 
 <!-- FOOTER -->
@@ -157,7 +177,5 @@
   <div>Atlanta, Georgia • United States</div>
 </footer>
 
-<!-- SCRIPTS -->
-<script src="script.js"></script>
 </body>
 </html>

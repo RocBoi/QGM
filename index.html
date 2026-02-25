@@ -3,72 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Quez Global Music Publishing | RocBoi Quez</title>
 <meta name="description" content="Luxury global music publishing. Accepting ASCAP songwriters, producers & content creators. Publishing Elevated.">
-
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   /* Global Styles */
-  body {
-    margin:0;
-    font-family:'Inter', sans-serif;
-    background-color:#000;
-    color:#f0c040;
-  }
+  body, html { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; background-color:#000; color:#f0c040; scroll-behavior:smooth; }
   a { color:#f0c040; text-decoration:none; }
   a:hover { text-decoration:underline; }
-  header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background-color:#111;
-    position:sticky;
-    top:0;
-    z-index:1000;
-  }
-  .logo { font-family:'Bebas Neue', sans-serif; font-size:2rem; letter-spacing:2px; }
-  nav a { margin-left:30px; font-weight:500; }
-  
+
+  header { display:flex; justify-content:space-between; align-items:center; padding:15px 30px; background-color:#111; position:sticky; top:0; z-index:1000; }
+  .logo-link img { height:60px; width:auto; }
+  nav a { margin-left:25px; font-weight:500; font-size:1rem; }
+
   /* Hero Section */
   .hero { position:relative; text-align:center; height:80vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
   .hero video { position:absolute; width:100%; height:100%; object-fit:cover; z-index:0; }
   .hero-overlay { position:absolute; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:1; }
-  .hero-content { position:relative; z-index:2; max-width:900px; }
-  .hero-content h1 { font-family:'Bebas Neue'; font-size:3rem; margin-bottom:20px; color:#f0c040; }
-  .hero-content p { font-size:1.2rem; margin-bottom:30px; color:#fff; }
-  .btn { padding:12px 30px; border-radius:6px; font-weight:600; transition:0.3s; }
-  .btn.gold { background-color:#f0c040; color:#000; margin-right:15px; }
+  .hero-content { position:relative; z-index:2; max-width:900px; padding:0 20px; }
+  .hero-content h1 { font-family:'Bebas Neue', sans-serif; font-size:3rem; margin-bottom:15px; color:#f0c040; line-height:1.1; }
+  .hero-content p { font-size:1.2rem; margin-bottom:25px; color:#fff; }
+
+  .btn { padding:12px 28px; border-radius:6px; font-weight:600; transition:0.3s; display:inline-block; margin:5px 5px 0 0; }
+  .btn.gold { background-color:#f0c040; color:#000; }
   .btn.gold:hover { background-color:#d4aa00; }
   .btn.outline { border:2px solid #f0c040; color:#f0c040; }
   .btn.outline:hover { background-color:#f0c040; color:#000; }
 
+  /* Sections */
   section { padding:60px 20px; max-width:1200px; margin:0 auto; }
-  h2 { font-family:'Bebas Neue'; font-size:2.2rem; margin-bottom:20px; color:#f0c040; }
-  p, li { font-size:1rem; line-height:1.8; color:#fff; }
-  ul { padding-left:20px; }
+  h2 { font-family:'Bebas Neue', sans-serif; font-size:2.2rem; margin-bottom:20px; color:#f0c040; text-align:center; }
+  p, li { font-size:1rem; line-height:1.8; color:#fff; text-align:center; }
+  ul { padding:0; list-style:none; text-align:center; }
+  ul li { margin:8px 0; }
 
-  .authority { display:flex; flex-wrap:wrap; justify-content:space-around; background-color:#111; padding:40px 20px; margin:0; color:#f0c040; text-align:center; font-weight:600; }
+  /* Authority Strip */
+  .authority { display:flex; flex-wrap:wrap; justify-content:center; background-color:#111; padding:40px 20px; margin:0; color:#f0c040; text-align:center; font-weight:600; }
+  .authority div { margin:10px 20px; }
 
   /* NFT / Digital Assets Section */
   #digital-assets { background-color:#111; text-align:center; }
-  #digital-assets ul { list-style:none; padding:0; margin-bottom:40px; color:#fff; }
-  #digital-assets li { margin:10px 0; }
+  #digital-assets a.btn { margin-top:20px; }
 
   /* Footer */
-  footer { text-align:center; padding:40px 20px; background-color:#111; color:#f0c040; }
+  footer { text-align:center; padding:40px 20px; background-color:#111; color:#f0c040; font-size:0.9rem; }
+
+  /* Responsive */
+  @media(max-width:768px) {
+    .hero-content h1 { font-size:2rem; }
+    .hero-content p { font-size:1rem; }
+    nav a { margin-left:15px; font-size:0.9rem; }
+    header { padding:15px 20px; }
+  }
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
-<header style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background-color:#111; position:sticky; top:0; z-index:1000;">
-  <a href="#home" class="logo-link" style="display:flex; align-items:center;">
-    <img src="https://raw.githubusercontent.com/RocBoi/QGM/cd483ee7cdcb5e5e737e197c5e4f2dfb0dc31cbb/885E390E-CADF-465B-AD2F-9F9D3245FF05.png" 
-         alt="QGM Logo" 
-         style="height:60px; width:auto;">
+<header>
+  <a href="#home" class="logo-link">
+    <img src="https://raw.githubusercontent.com/RocBoi/QGM/cd483ee7cdcb5e5e737e197c5e4f2dfb0dc31cbb/885E390E-CADF-465B-AD2F-9F9D3245FF05.png" alt="QGM Logo">
   </a>
   <nav>
     <a href="#home">Home</a>
@@ -96,16 +91,14 @@
   </div>
 </section>
 
-<!-- ABOUT / MISSION STATEMENT -->
+<!-- ABOUT / MISSION -->
 <section id="about">
   <h2>About & Mission</h2>
   <p>
     At Quez Global Music Publishing (QGM), we are committed to elevating music creators worldwide.  
     Our mission is to empower <strong>ASCAP songwriters, content creators, and producers</strong> by providing transparent rights administration, strategic sync placement, and full catalog ownership.
   </p>
-  <p>
-    <strong>Slogan:</strong> Your Sound. Our Vision. Global Reach.
-  </p>
+  <p><strong>Slogan:</strong> Your Sound. Our Vision. Global Reach.</p>
   <p>Contact: <a href="mailto:licensing@rocboiquez.online">licensing@rocboiquez.online</a></p>
 </section>
 
@@ -148,7 +141,7 @@
   </p>
 </section>
 
-<!-- NFT / DIGITAL ASSETS SECTION -->
+<!-- NFT / DIGITAL ASSETS -->
 <section id="digital-assets">
   <h2>Digital Assets & Ownership</h2>
   <p><strong>All In – Official Music Video</strong><br>Limited On-Chain Edition (50)</p>
@@ -167,10 +160,7 @@
 <!-- SUBMISSIONS -->
 <section class="submissions" id="submissions">
   <h2>Writer & Producer Submissions</h2>
-  <p>
-    We are selectively reviewing high-quality, sync-ready compositions.
-    Submit instrumentals, songs, and production reels for consideration.
-  </p>
+  <p>We are selectively reviewing high-quality, sync-ready compositions. Submit instrumentals, songs, and production reels for consideration.</p>
   <p>Contact: <a href="mailto:licensing@rocboiquez.online">licensing@rocboiquez.online</a></p>
 </section>
 
